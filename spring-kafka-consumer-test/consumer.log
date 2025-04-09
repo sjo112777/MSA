@@ -1,0 +1,563 @@
+2025-04-09T11:04:42.516+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] k.c.s.SpringKafkaConsumerTestApplication : Starting SpringKafkaConsumerTestApplication using Java 17.0.12 with PID 5376 (C:\Users\lotte6\Desktop\workspace\MSA\spring-kafka-consumer-test\build\classes\java\main started by lotte6 in C:\Users\lotte6\Desktop\workspace\MSA\spring-kafka-consumer-test)
+2025-04-09T11:04:42.518+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] k.c.s.SpringKafkaConsumerTestApplication : No active profile set, falling back to 1 default profile: "default"
+2025-04-09T11:04:42.554+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-09T11:04:42.555+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-09T11:04:43.347+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-09T11:04:43.358+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-09T11:04:43.358+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-09T11:04:43.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-09T11:04:43.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 838 ms
+2025-04-09T11:04:43.767+09:00  WARN 5376 --- [spring-kafka-consumer-test] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-04-09T11:04:43.815+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-09T11:04:43.847+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9090]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-my-topic03-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-my-topic03
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-04-09T11:04:43.883+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-04-09T11:04:43.954+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-04-09T11:04:43.955+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-04-09T11:04:43.955+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1744164283952
+2025-04-09T11:04:43.958+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Subscribed to topic(s): my-topic-03
+2025-04-09T11:04:43.964+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9090]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-my-topic02-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-my-topic02
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-04-09T11:04:43.966+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-04-09T11:04:43.973+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-04-09T11:04:43.974+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-04-09T11:04:43.974+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1744164283973
+2025-04-09T11:04:43.974+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Subscribed to topic(s): my-topic-02
+2025-04-09T11:04:43.976+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9090]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group-my-topic01-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group-my-topic01
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-04-09T11:04:43.977+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-04-09T11:04:43.984+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2025-04-09T11:04:43.984+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2025-04-09T11:04:43.984+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1744164283984
+2025-04-09T11:04:43.985+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Subscribed to topic(s): my-topic-01
+2025-04-09T11:04:43.994+09:00  INFO 5376 --- [spring-kafka-consumer-test] [restartedMain] k.c.s.SpringKafkaConsumerTestApplication : Started SpringKafkaConsumerTestApplication in 1.843 seconds (process running for 2.31)
+2025-04-09T11:04:44.303+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Cluster ID: sUpcdqBuTuuk-dK74Ow8-w
+2025-04-09T11:04:44.303+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Cluster ID: sUpcdqBuTuuk-dK74Ow8-w
+2025-04-09T11:04:44.303+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Cluster ID: sUpcdqBuTuuk-dK74Ow8-w
+2025-04-09T11:04:44.304+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Discovered group coordinator localhost:9090 (id: 2147483646 rack: null)
+2025-04-09T11:04:44.304+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Discovered group coordinator localhost:9090 (id: 2147483646 rack: null)
+2025-04-09T11:04:44.304+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Discovered group coordinator localhost:9090 (id: 2147483646 rack: null)
+2025-04-09T11:04:44.306+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] (Re-)joining group
+2025-04-09T11:04:44.306+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] (Re-)joining group
+2025-04-09T11:04:44.306+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] (Re-)joining group
+2025-04-09T11:04:44.320+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Request joining group due to: need to re-join with the given member-id: consumer-group-my-topic03-1-7a7266d7-bbf7-47b0-89d1-f9d3029468c6
+2025-04-09T11:04:44.320+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Request joining group due to: need to re-join with the given member-id: consumer-group-my-topic01-3-44e5faf9-9ab2-40f0-803e-e4dd97a18950
+2025-04-09T11:04:44.320+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Request joining group due to: need to re-join with the given member-id: consumer-group-my-topic02-2-9f51bb05-cb59-44bf-bf87-ee920bed4b36
+2025-04-09T11:04:44.320+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] (Re-)joining group
+2025-04-09T11:04:44.320+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] (Re-)joining group
+2025-04-09T11:04:44.320+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] (Re-)joining group
+2025-04-09T11:04:44.323+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Successfully joined group with generation Generation{generationId=3, memberId='consumer-group-my-topic02-2-9f51bb05-cb59-44bf-bf87-ee920bed4b36', protocol='range'}
+2025-04-09T11:04:44.323+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Successfully joined group with generation Generation{generationId=3, memberId='consumer-group-my-topic03-1-7a7266d7-bbf7-47b0-89d1-f9d3029468c6', protocol='range'}
+2025-04-09T11:04:44.323+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Successfully joined group with generation Generation{generationId=5, memberId='consumer-group-my-topic01-3-44e5faf9-9ab2-40f0-803e-e4dd97a18950', protocol='range'}
+2025-04-09T11:04:44.331+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Finished assignment for group at generation 3: {consumer-group-my-topic02-2-9f51bb05-cb59-44bf-bf87-ee920bed4b36=Assignment(partitions=[my-topic-02-0, my-topic-02-1])}
+2025-04-09T11:04:44.331+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Finished assignment for group at generation 5: {consumer-group-my-topic01-3-44e5faf9-9ab2-40f0-803e-e4dd97a18950=Assignment(partitions=[my-topic-01-0])}
+2025-04-09T11:04:44.331+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Finished assignment for group at generation 3: {consumer-group-my-topic03-1-7a7266d7-bbf7-47b0-89d1-f9d3029468c6=Assignment(partitions=[my-topic-03-0, my-topic-03-1, my-topic-03-2])}
+2025-04-09T11:04:44.335+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Successfully synced group in generation Generation{generationId=5, memberId='consumer-group-my-topic01-3-44e5faf9-9ab2-40f0-803e-e4dd97a18950', protocol='range'}
+2025-04-09T11:04:44.335+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Successfully synced group in generation Generation{generationId=3, memberId='consumer-group-my-topic02-2-9f51bb05-cb59-44bf-bf87-ee920bed4b36', protocol='range'}
+2025-04-09T11:04:44.335+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Successfully synced group in generation Generation{generationId=3, memberId='consumer-group-my-topic03-1-7a7266d7-bbf7-47b0-89d1-f9d3029468c6', protocol='range'}
+2025-04-09T11:04:44.336+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Notifying assignor about the new Assignment(partitions=[my-topic-01-0])
+2025-04-09T11:04:44.336+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Notifying assignor about the new Assignment(partitions=[my-topic-02-0, my-topic-02-1])
+2025-04-09T11:04:44.336+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Notifying assignor about the new Assignment(partitions=[my-topic-03-0, my-topic-03-1, my-topic-03-2])
+2025-04-09T11:04:44.339+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-my-topic02-2, groupId=group-my-topic02] Adding newly assigned partitions: my-topic-02-0, my-topic-02-1
+2025-04-09T11:04:44.339+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-my-topic03-1, groupId=group-my-topic03] Adding newly assigned partitions: my-topic-03-0, my-topic-03-1, my-topic-03-2
+2025-04-09T11:04:44.339+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-group-my-topic01-3, groupId=group-my-topic01] Adding newly assigned partitions: my-topic-01-0
+2025-04-09T11:04:44.349+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition my-topic-02-0 to the committed offset FetchPosition{offset=53241, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9090 (id: 1 rack: null)], epoch=0}}
+2025-04-09T11:04:44.349+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition my-topic-01-0 to the committed offset FetchPosition{offset=100010, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9090 (id: 1 rack: null)], epoch=0}}
+2025-04-09T11:04:44.349+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition my-topic-03-1 to the committed offset FetchPosition{offset=39629, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9090 (id: 1 rack: null)], epoch=0}}
+2025-04-09T11:04:44.349+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition my-topic-02-1 to the committed offset FetchPosition{offset=49761, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9090 (id: 1 rack: null)], epoch=0}}
+2025-04-09T11:04:44.349+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition my-topic-03-0 to the committed offset FetchPosition{offset=33392, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9090 (id: 1 rack: null)], epoch=0}}
+2025-04-09T11:04:44.349+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition my-topic-03-2 to the committed offset FetchPosition{offset=30980, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9090 (id: 1 rack: null)], epoch=0}}
+2025-04-09T11:04:44.351+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-my-topic01: partitions assigned: [my-topic-01-0]
+2025-04-09T11:04:44.351+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-my-topic03: partitions assigned: [my-topic-03-0, my-topic-03-1, my-topic-03-2]
+2025-04-09T11:04:44.351+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : group-my-topic02: partitions assigned: [my-topic-02-0, my-topic-02-1]
+2025-04-09T11:04:44.387+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.387+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-0
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-1
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-2
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-3
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-4
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-5
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.388+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-6
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-7
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-8
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-9
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-10
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-11
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-12
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-13
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.389+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-14
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-15
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-16
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-17
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-18
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-19
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-20
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-21
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-22
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.390+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-23
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-24
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-25
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-26
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-27
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-28
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-29
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-30
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-31
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-32
+2025-04-09T11:04:44.391+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-33
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-34
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-35
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-36
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-37
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-38
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-39
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-40
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-41
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-42
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.392+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-43
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-44
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-45
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-46
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-47
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-48
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-49
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-50
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-51
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-52
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-53
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-54
+2025-04-09T11:04:44.393+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-55
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-56
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-57
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-58
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-59
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-60
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-61
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-62
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-63
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-64
+2025-04-09T11:04:44.394+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-65
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-66
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-67
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-68
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-69
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-70
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-71
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-72
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-73
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-74
+2025-04-09T11:04:44.395+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-75
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-76
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-77
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-78
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-79
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-80
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-81
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-82
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-83
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-84
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-85
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-86
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.396+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-87
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-88
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-89
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-90
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-91
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-92
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-93
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-94
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-95
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-96
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-97
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.397+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-98
+2025-04-09T11:04:44.398+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : topic01Consume...
+2025-04-09T11:04:44.398+09:00  INFO 5376 --- [spring-kafka-consumer-test] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] k.c.s.service.KafkaConsumerService       : null-message-99
